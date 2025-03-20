@@ -31,4 +31,16 @@ public class OrdenacaoPessoa {
 
         //pessoas.sort((p1, p2) -> Double.compare(p1.getAltura(), p2.getAltura()));
     }
+
+    public static void main(String[] args) {
+        OrdenacaoPessoa ordenacaoPessoa = new OrdenacaoPessoa();
+        ordenacaoPessoa.adicionarPessoa("João", 20, 1.80);        
+        ordenacaoPessoa.adicionarPessoa("Maria", 25, 1.70);
+
+        List<Pessoa> pessoasPorIdade = ordenacaoPessoa.ordenarPorIdade();
+        List<Pessoa> pessoasPorAltura = ordenacaoPessoa.ordenarPorAltura();
+
+        pessoasPorIdade.forEach(System.out::println);
+        pessoasPorAltura.forEach(System.out::println);
+    }
 }

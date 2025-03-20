@@ -2,7 +2,6 @@ package Java.Colletions.map.Pesquisa;
 
 import java.util.HashMap;
 import java.util.Map;
-import java.util.concurrent.atomic.AtomicLong;
 
 public class EstoqueProdutos {
     private Map<Long, Produto> estoqueProdutos;
@@ -37,10 +36,6 @@ public class EstoqueProdutos {
     public Produto obterProdutoMaiorPreco() {
         return estoqueProdutos.values().stream().max((p1, p2) -> Double.compare(p1.getPreco(), p2.getPreco())).get();
     }
-
-}
-
-class main {
     public static void main(String[] args) {
         EstoqueProdutos estoqueProdutos = new EstoqueProdutos();
         estoqueProdutos.adicionarProduto(1L, "Notebook", 3000.0, 10);
@@ -52,7 +47,7 @@ class main {
         System.out.println(estoqueProdutos.obterProdutoMaiorPreco().getPreco());
         
         System.out.println(estoqueProdutos.obterValorTotalEstoque());
-    }    
+    }  
 }
 
 

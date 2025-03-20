@@ -2,13 +2,9 @@ package Java.Colletions.set.OperacoesBasicas;
 
 import java.util.ArrayList;
 import java.util.Collections;
-import java.util.Comparator;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
-import java.util.TreeSet;
-
-import Java.Colletions.List.Ordenacao.Pessoa;
 
 public class ConjuntoConvidados {
     private Set<Convidado> convidados;
@@ -49,6 +45,20 @@ public class ConjuntoConvidados {
     /*public v obterConvidados() {
         return new ArrayList<>(convidados);
     }*/
-    
+    public static void main(String[] args) {
+        ConjuntoConvidados conjunto = new ConjuntoConvidados();        
+        conjunto.adicionarConvidado("Joaquim", 123);
+        conjunto.adicionarConvidado("Maria", 456);
+        conjunto.adicionarConvidado("João", 789);
+        conjunto.adicionarConvidado("Ana", 123); // Duplicata, não adiciona
+        
+        System.out.println(conjunto.contarConvidados()); // 3        
+              
+        conjunto.removeConvidadoPorCodigoConvite(123);
+        System.out.println(conjunto.contarConvidados()); // 2
+        
+        System.out.println(conjunto.getConvidados()); // [Convidado{nome='Maria', codigoConvite=456}, Convidado{nome='João', codigoConvite=789}]        
+        System.err.println(conjunto.ordenarPorCodigoConvite());
+    }
 }
 

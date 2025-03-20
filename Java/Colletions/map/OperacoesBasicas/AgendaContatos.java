@@ -33,10 +33,7 @@ public class AgendaContatos {
         }
         return contatos.get(nome);
     }
-}
 
-
-class main {
     public static void main(String[] args) {
         AgendaContatos agendaContatos = new AgendaContatos();
         agendaContatos.adicionarContato("Luan", 1111);

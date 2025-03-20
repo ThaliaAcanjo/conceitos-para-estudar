@@ -32,5 +32,18 @@ public class ConjuntoPalavrasUnicas {
     public Set<String> getPalavrasUnicas() {
         return palavrasUnicas;
     }
+
+    public static void main(String[] args) {ConjuntoPalavrasUnicas conjuntoPalavrasUnicas = new ConjuntoPalavrasUnicas();
+        conjuntoPalavrasUnicas.adicionarPalavra("null"); 
+        conjuntoPalavrasUnicas.adicionarPalavra("banana");
+        conjuntoPalavrasUnicas.adicionarPalavra("computador");
+        conjuntoPalavrasUnicas.adicionarPalavra("caneca");
+
+        conjuntoPalavrasUnicas.removerPalavra("banana");
+        var temPalavra = conjuntoPalavrasUnicas.verificarPalavra("caneca");
+        System.out.println(temPalavra);
+
+        System.out.println(conjuntoPalavrasUnicas.obterPalavrasUnicas());
+    }
     
 }

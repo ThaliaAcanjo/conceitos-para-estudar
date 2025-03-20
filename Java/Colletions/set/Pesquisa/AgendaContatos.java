@@ -1,7 +1,6 @@
 package Java.Colletions.set.Pesquisa;
 
 import java.util.HashSet;
-import java.util.List;
 import java.util.Set;
 
 public class AgendaContatos {
@@ -39,5 +38,18 @@ public class AgendaContatos {
                 contato.setNumero(numero);
             }
         }*/
+    }
+
+    public static void main(String[] args) {
+        AgendaContatos agendaContatos = new AgendaContatos();        
+        agendaContatos.adicionarContato("Luan", 1111);
+        agendaContatos.adicionarContato("Thalia", 2222);
+        agendaContatos.adicionarContato("Thalia Silva", 5555);
+        agendaContatos.adicionarContato("Ana", 4444); // Duplicata, não adiciona
+
+        System.out.println(agendaContatos.buscarContato("Thalia"));
+
+        agendaContatos.atualizarContato("Thalia Silva", 3333);
+        System.out.println(agendaContatos.buscarContato("Thalia"));
     }
 }

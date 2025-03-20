@@ -25,4 +25,15 @@ public class CadastroProdutos {
         produtosPorPreco.addAll(produtos);
         return produtosPorPreco;
     }
+    public static void main(String[] args) {
+        CadastroProdutos cadastroProdutos = new CadastroProdutos();        
+        cadastroProdutos.adicionarProduto("Notebook", 123, 5000.00, 5);
+        cadastroProdutos.adicionarProduto("Smartphone", 456, 2000.00, 10);
+        cadastroProdutos.adicionarProduto("Tablet", 789, 1500.00, 8);
+        cadastroProdutos.adicionarProduto("Notebook", 122, 5000.00, 5); // Duplicata, não adiciona
+
+        System.out.println(cadastroProdutos.exibirProdutosPorNome());
+
+        System.out.println(cadastroProdutos.exibirProdutosPorPreco());
+    }
 }
